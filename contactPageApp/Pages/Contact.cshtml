@@ -1,0 +1,38 @@
+﻿@page
+<!--this page uses a model-->
+<!--this page does not use a controller-->
+@model contactPageApp.Pages.ContactModel
+@{
+    // page title here
+    ViewData["Title"] = "Contact Page";
+}
+<div class="text-center">
+    <h3>Contact Us</h3>
+    <br />
+
+<div class="container" style="color:white; background-color:grey">
+
+@if(Model.hasData)
+{
+    <p>Hello @Model.firstName @Model.lastName</p>
+    <p>We received your message correctly:</p>
+    <p>@Model.message</p>
+}
+</div>
+
+<br /><br />
+    <form method="POST">
+        <label for="fname">First Name</label> &nbsp;
+        <input type="text" id="fname" name="firstname" /><br /><br />
+
+        <label for="lname">Last Name</label> &nbsp;
+        <input type="text" id="lname" name="lastname" /><br /><br />
+
+        <label for="message">Message</label> &nbsp;
+        <textarea id="lname" name="message" style="height:50px; width:170px" /></textarea>  <br /><br />
+
+        <input type="submit" value="Submit" />
+
+    </form>
+
+</div>
