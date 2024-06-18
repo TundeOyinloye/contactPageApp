@@ -1,4 +1,11 @@
 ###############################################################################
+# Set default programmig language displayed on this repository
+###############################################################################
+*.cs linguist-detectable=true
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+*.js linguist-detectable=false
+###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
